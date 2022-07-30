@@ -16,7 +16,7 @@ const StyledElement = styled.div`
 		-ms-border-radius: 20px !important;
 		-o-border-radius: 20px !important;
 		-webkit-border-radius: 20px !important;
-		border-radius: 20px !important;
+		border-radius: 16px !important;
 		font-family: 'Gilroy', sans-serif;
 		overflow: hidden !important;
 		& .plyr__controls {
@@ -48,7 +48,7 @@ const StyledElement = styled.div`
 			}
 			& .plyr__time {
 				font-family: 'Gilroy', sans-serif !important;
-				font-size: 15px !important;
+				font-size: 16px !important;
 				font-weight: 600;
 			}
 			& .plyr__time--current {
@@ -60,7 +60,7 @@ const StyledElement = styled.div`
 		}
 	}
 `;
-const Video = ({ source, isEncryption }) => {
+const Video = ({ isEncryption, source }) => {
 	const ref = useRef(null);
 	const player = useRef(null);
 	useEffect(() => {
@@ -84,6 +84,7 @@ const Video = ({ source, isEncryption }) => {
 				selected: 1,
 				options: [0.5, 1, 1.5, 2],
 			},
+			ratio: '16:9',
 			i18n: {
 				normal: lang === 'uz' ? 'Normal' : 'Нормальный',
 				quality: lang === 'uz' ? 'Tasvir sifati' : 'Качество',
@@ -115,24 +116,22 @@ const Video = ({ source, isEncryption }) => {
 		} else {
 			player.current = new Plyr(ref.current, defaultOptions);
 		}
-	}, [source]);
+	}, [source, isEncryption]);
 	return (
 		<StyledElement>
 			<video
 				controls
 				crossOrigin="true"
-				height="auto"
 				playsInline
 				// poster={Poster}
 				preload="none"
 				ref={ref}
 				src={source}
-				width="100%"
 			/>
 			<Styles />
 		</StyledElement>
 	);
 };
-Video.defaultProps = { source: '', isEncryption: false };
-Video.propTypes = { source: string, isEncryption: bool };
+Video.defaultProps = { isEncryption: false, source: '' };
+Video.propTypes = { isEncryption: bool, source: string };
 export default Video;
