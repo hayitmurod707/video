@@ -14,7 +14,7 @@ const StyledElement = styled.div`
 const App = () => (
 	<StyledElement>
 		<div className="video-container">
-			<Video source={Source} isEncryption={false} />
+			<Video source={Source} />
 		</div>
 	</StyledElement>
 );
