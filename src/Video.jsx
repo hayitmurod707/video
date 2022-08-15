@@ -1,6 +1,7 @@
 import Hls from 'hls.js';
 // import Poster from 'Images/poster.jpg';
 import Plyr from 'plyr';
+import 'plyr/dist/plyr.css';
 import { bool, string } from 'prop-types';
 import React, { useEffect, useRef } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
@@ -120,9 +121,9 @@ const Video = ({ isEncryption, source }) => {
 	return (
 		<StyledElement>
 			<video
-				controls
+				// controls
 				crossOrigin="true"
-				playsInline
+				// playsInline
 				// poster={Poster}
 				preload="none"
 				ref={ref}
@@ -132,6 +133,6 @@ const Video = ({ isEncryption, source }) => {
 		</StyledElement>
 	);
 };
-Video.defaultProps = { isEncryption: false, source: '' };
+Video.defaultProps = { isEncryption: true, source: '' };
 Video.propTypes = { isEncryption: bool, source: string };
 export default Video;

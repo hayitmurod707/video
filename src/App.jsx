@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import Source from './lamborghini.mp4';
 import Video from './Video';
 const StyledElement = styled.div`
-	display: flex;
-	justify-content: center;
 	align-items: center;
+	display: flex;
 	height: 100vh;
+	justify-content: center;
 	& .video-container {
 		width: 700px;
 	}
@@ -14,7 +14,8 @@ const StyledElement = styled.div`
 const App = () => (
 	<StyledElement>
 		<div className="video-container">
-			<Video source={Source} />
+			<h1 style={{ textAlign: 'center' }}>Video component with plyr</h1>
+			<Video source={Source} isEncryption={false} />
 		</div>
 	</StyledElement>
 );
