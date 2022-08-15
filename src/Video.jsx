@@ -121,9 +121,9 @@ const Video = ({ isEncryption, source }) => {
 	return (
 		<StyledElement>
 			<video
-				// controls
+				controls
 				crossOrigin="true"
-				// playsInline
+				playsInline
 				// poster={Poster}
 				preload="none"
 				ref={ref}
