@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/video/static/css/main.8a2e2a05.css",
+    "main.js": "/video/static/js/main.7a5f6adc.js",
+    "static/media/lamborghini.mp4": "/video/static/media/lamborghini.7c92ae8103d47d3be64a.mp4",
+    "static/media/Gilroy-SemiBold.woff2": "/video/static/media/Gilroy-SemiBold.63a4be92e837b8fdfc8d.woff2",
+    "index.html": "/video/index.html",
+    "main.8a2e2a05.css.map": "/video/static/css/main.8a2e2a05.css.map",
+    "main.7a5f6adc.js.map": "/video/static/js/main.7a5f6adc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8a2e2a05.css",
+    "static/js/main.7a5f6adc.js"
+  ]
+}
